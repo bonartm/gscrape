@@ -7,7 +7,7 @@
 ## requirements
 
 ```shell
-conda env create -f environment.yml
+conda create --name gscrape --file requirements.txt
 conda activate gscrape
 ```
 

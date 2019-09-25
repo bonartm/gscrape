@@ -1,0 +1,35 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+_libgcc_mutex=0.1=main
+appdirs=1.4.3=py_1
+asn1crypto=0.24.0=py37_1003
+bzip2=1.0.8=h516909a_1
+ca-certificates=2019.9.11=hecc5488_0
+certifi=2019.9.11=py37_0
+cffi=1.12.3=py37h8022711_0
+cryptography=2.7=py37h72c5cf5_0
+idna=2.8=py37_1000
+libffi=3.2.1=he1b5a44_1006
+libgcc-ng=9.1.0=hdf63c60_0
+libstdcxx-ng=9.1.0=hdf63c60_0
+ncurses=6.1=hf484d3e_1002
+openssl=1.1.1c=h516909a_0
+pip=19.2.3=py37_0
+pycparser=2.19=py37_1
+pyee=5.0.0rc2=py_0
+pyopenssl=19.0.0=py37_0
+pyppeteer=0.0.26=py_0
+pysocks=1.7.1=py37_0
+python=3.7.3=h33d41f4_1
+readline=8.0=hf8c457e_0
+setuptools=41.2.0=py37_0
+six=1.12.0=py37_1000
+sqlite=3.29.0=hcee41ef_1
+tk=8.6.9=hed695b0_1003
+tqdm=4.36.1=py_0
+urllib3=1.25.6=py37_0
+websockets=8.0.2=py37h516909a_0
+wheel=0.33.6=py37_0
+xz=5.2.4=h14c3975_1001
+zlib=1.2.11=h516909a_1006
