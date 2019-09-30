@@ -2,15 +2,7 @@ import pyppeteer
 from typing import List, Dict, Callable, Optional
 from gscrape.elements import SerpBlock
 import asyncio
-
-def _catch_missing_elem(fun: Callable) -> Callable:
-    async def handler(*args, **kwargs):
-        try:
-            return await fun(*args, **kwargs)
-        except pyppeteer.errors.ElementHandleError:
-            return None
-    return handler
-
+from gscrape.utils import inner_text_all, inner_text
 
 class GoogleSerp:
 
@@ -18,42 +10,23 @@ class GoogleSerp:
         self.page = page
 
     async def scrape(self):
-        await self.page.waitFor(500)
-        await self.page.waitForSelector('#Wprf1b')
+        await self.page.waitForFunction("""()=>{
+            loc = document.getElementById('Wprf1b');
+            return loc != null && loc.innerText != "";
+        }""")
 
         results = []
-        results.append({'stats': await self._stats()})
+        results.append({
+            'stats': await inner_text(self.page, "#resultStats"),
+            'appbar': await inner_text_all(self.page, ".appbar .title")})
+
         blocks = await self.page.querySelectorAll('.bkWMgd')
         for block in blocks:
             elem = await SerpBlock.get_instance(block)
             results.append(await elem.scrape())
 
         results.append({
-            'suggestions': await self._suggestions(),
-            'location': await self._location()})
-        return results        
-
-    @_catch_missing_elem
-    async def _stats(self) -> Optional[str]:
-        return await self.page.querySelectorEval('#resultStats', 'node => node.innerText')
-       
-    @_catch_missing_elem
-    async def _location(self) -> Optional[str]:
-        return await self.page.querySelectorEval('#Wprf1b', 'node => node.innerText')
-
-    @_catch_missing_elem
-    async def _suggestions(self) -> Optional[List[str]]:
-        return await self.page.querySelectorAllEval('#brs a', 'nodes => nodes.map(node => node.innerText)')
-
-
-    
-
-
-
-    
-
-       
-
-    
-
-    
+            'suggestions': await inner_text_all(self.page, '#brs a'),
+            'location': await inner_text(self.page, '#Wprf1b')})
+        return results
+            
