@@ -1,8 +1,8 @@
-# gscrape - yet another google scraper tool
+# gscrape - google scraper tool
 
 - handles various search elements, e.g. news cards, images, videos, organic results, twitter carousel (see examples)
-- uses headless chrome and the [`pyppeteer`](https://github.com/miyakogi/pyppeteer) library
-- unstable version under heavy development
+- gps geolocation can be overridden
+- based on headless chrome and modified [`pyppeteer`](https://github.com/miyakogi/pyppeteer) library
 
 ## requirements
 
