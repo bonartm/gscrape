@@ -2,6 +2,7 @@
 
 - handles various search elements, e.g. news cards, images, videos, organic results, twitter carousel (see examples)
 - gps geolocation can be overridden
+- proxy server can be provided
 - based on headless chrome and modified [`pyppeteer`](https://github.com/miyakogi/pyppeteer) library
 
 ## installation
@@ -116,7 +117,7 @@ python -m gscrape.run --latlng 40.7,-74 'angela merkel'
         "source": "DW",
         "time": "3 days ago"
       },
-      ...
+      ["..."]
     ]
   },
   {
@@ -143,7 +144,7 @@ python -m gscrape.run --latlng 40.7,-74 'angela merkel'
         "platform": "YouTube ",
         "time": " Sep 7, 2019"
       },
-      ...
+      ["..."]
     ]
   },
   {
@@ -163,7 +164,7 @@ python -m gscrape.run --latlng 40.7,-74 'angela merkel'
         "title": "Angela Merkel - latest news, breaking stories and comment ...",
         "snippet": "All the latest breaking news on Angela Merkel. Browse The Independent's complete collection of articles and commentary on Angela Merkel."
       },
-      ...
+      ["..."]
     ]
   },
   {
@@ -183,14 +184,3 @@ python -m gscrape.run --latlng 40.7,-74 'angela merkel'
   }
 ]
 ```
-
-## development environment
-
-```shell
-conda create --name gscrape --file requirements.txt
-conda activate gscrape
-```
-
-## free proxies
-
-- <http://pubproxy.com/api/proxy?user_agent=true&cookies=true&https=true&google=true&speed=10>

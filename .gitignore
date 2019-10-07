@@ -1,6 +1,7 @@
 .directory
 .vscode
 out.json
+notes.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

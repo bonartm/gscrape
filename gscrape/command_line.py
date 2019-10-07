@@ -38,11 +38,11 @@ async def run(args):
 def main():
     parser = argparse.ArgumentParser(description="Scrape Google's autocomplete and first result page")
     parser.add_argument('term', type=str, help='search term')
-    parser.add_argument('--latlng', help = 'set geolocation (default: "52.520008,13.404954" (Berlin))', metavar='<lat>,<lng>', default = None)
+    parser.add_argument('--latlng', help = 'set geolocation (default: None)', metavar='<lat>,<lng>', default = None)
+    parser.add_argument('--url', help = 'google url (default: "https://www.google.com")', default = 'https://www.google.com', metavar='<url>')
+    parser.add_argument('--proxy', help = 'proxy server url (default: None)', metavar = 'http://user:password@localhost:port', default=None)
+    parser.add_argument('--graphical', help = 'start chrome in graphical mode', action='store_true', default=False)
     parser.add_argument('--autocomplete', action='store_true', help = 'retrieve autocompletions')
-    parser.add_argument('--url', help = 'google url (default: "https://www.google.com")', default = 'https://www.google.com')
-    parser.add_argument('--graphical', help = 'start chrome in graphical mode (default: False)', action='store_true', default=False)
-    parser.add_argument('--proxy', help = 'proxy server url', metavar = 'http://user:password@localhost:port', default=None)
 
     args = parser.parse_args()
 
