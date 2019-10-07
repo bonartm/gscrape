@@ -1,0 +1,92 @@
+{
+    "stats": "#resultStats",
+    "appbar": ".appbar .title",
+    "elements": {
+       "selector": ".bkWMgd",
+       "elements": {
+           "peopleasked": ".related-question-pair",
+           "images": {
+               "selector": ".YDJP6c",
+               "elements": {
+                   "url": {
+                       "selector": "img",
+                       "attribute": "title"
+                   },
+                   "sources": {
+                       "selector": "img",
+                       "attribute": "src"
+                   }
+               }               
+           },
+           "instantanswer": ".ifM9O > .Z0LcW",
+           "videos": {
+               "selector": ".P94G9b",
+               "elements": {
+                   "url": {
+                       "selector": "g-inner-card a",
+                       "attribute": "href"
+                   },
+                   "title": ".wCIBKb",
+                   "source": "v",
+                   "platform": ".nHGuld .zECGdd",
+                   "time": ".nHGuld .zECGdd"
+               }
+           },
+           "organic": {
+               "selector": ".rc",
+               "elements": {
+                    "url": {
+                        "selector": ".rc .r > a:nth-of-type(1)",
+                        "attribute": "href"
+                    },
+                    "title": ".ellip",
+                    "snippet": ".st"
+               }
+           },
+           "topstories_carousel": {
+                "selector": ".So9e7d",
+                "elements": {
+                    "url": {
+                        "selector": ".So9e7d a",
+                        "attribute": "href"
+                    },
+                    "title": ".nDgy9d",
+                    "time": ".So9e7d .f",
+                    "source": ".So9e7d cite"
+                }
+            },
+            "topstories_cards": {
+                "selector": ".qmv19b",
+                "elements": {
+                    "url": {
+                        "selector": ".dbsr a",
+                        "attribute": "href"
+                    },
+                    "title": ".nDgy9d",
+                    "time": ".FGlSad span",
+                    "source": ".wqg8ad"
+                }
+            },
+            "twitter_carousel": {
+                "selector": ".rQgnxe",
+                "elements": {
+                    "title": ".zTpPx a",
+                    "url": {
+                        "selector": ".zTpPx a",
+                        "attribute": "href"
+                    },
+                    "elements": {
+                        "tweet_url": {
+                            "selector": ".zTpPx a",
+                            "attribute": "href"
+                        },
+                        "tweet": ".YBEXSb",
+                        "time": ".f"
+                    }        
+                }
+            }
+        }        
+    },
+    "suggestions": "#brs a",
+    "location": "#Wprf1b"
+}
