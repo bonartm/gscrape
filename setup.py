@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="gscrape",
-    version="0.1",
+    version="0.2",
     author="Malte Bonart",
     author_email="malte@bonart.de",
     description="google scraper tool built-on headless chrome ",
