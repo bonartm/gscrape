@@ -11,7 +11,6 @@ cmarkgfm==0.4.2
 cryptography==2.7
 docutils==0.15.2
 future==0.17.1
--e git+git@github.com:bonartm/gscrape.git@3188a874aee134798ace1bfca3e50df517f6e1da#egg=gscrape
 idna==2.8
 importlib-metadata==0.23
 isort==4.3.21
