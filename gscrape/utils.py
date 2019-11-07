@@ -9,11 +9,11 @@ import gscrape.scripts
 
 
 def _catch_missing_elem(fun: Callable) -> Callable:
-    async def handler(*args, **kwargs):
+    async def handler(node, selector, *args, **kwargs):
         try:
-            return await fun(*args, **kwargs)
+            return await fun(node, selector, *args, **kwargs)
         except ElementHandleError:
-            logging.warn(f"Element does not exist")
+            logging.warn(f"Element {selector} does not exist")
             return None
     return handler
 

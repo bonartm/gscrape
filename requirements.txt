@@ -11,6 +11,7 @@ cmarkgfm==0.4.2
 cryptography==2.7
 docutils==0.15.2
 future==0.17.1
+-e git+git@github.com:bonartm/gscrape.git@3188a874aee134798ace1bfca3e50df517f6e1da#egg=gscrape
 idna==2.8
 importlib-metadata==0.23
 isort==4.3.21
@@ -25,6 +26,7 @@ pycparser==2.19
 pyee==5.0.0
 Pygments==2.4.2
 pylint==2.4.1
+pymongo==3.8.0
 pyOpenSSL==19.0.0
 pyparsing==2.4.2
 pyppeteer==0.0.25
@@ -37,6 +39,7 @@ requests-toolbelt==0.9.1
 six==1.12.0
 tqdm==4.36.1
 twine==2.0.0
+typed-ast==1.4.0
 urllib3==1.25.6
 wcwidth==0.1.7
 webencodings==0.5.1

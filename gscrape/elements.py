@@ -73,7 +73,7 @@ class OrganicResults(SerpBlock):
     selector = '.rc'    
     async def scrape(self):
         urls = await inner_attribute_all(self.block, '.rc .r > a:nth-of-type(1)')
-        titles = await inner_text_all(self.block, '.ellip')
+        titles = await inner_text_all(self.block, '.LC20lb')
         snippets = await inner_text_all(self.block, '.st')
         return {"organic": to_dict(
             url=urls,title=titles,snippet=snippets)}
@@ -113,5 +113,10 @@ class TwitterCarousel(SerpBlock):
             "title":title, "url": url, "tweets": to_dict(
                 tweet = tweets, url=tweet_urls, time=times
             )}}
+
+class Maps(SerpBlock):
+    selector = '.xERobd'
+    async def scrape(self):        
+        return {'maps': None}
 
 
