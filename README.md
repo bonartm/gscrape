@@ -1,9 +1,14 @@
 # gscrape - google scraper tool
 
+This project is archived and no longer actively maintained.
+
+## features
+
 - handles various search elements, e.g. news cards, images, videos, organic results, twitter carousel (see examples)
 - gps geolocation can be overridden
 - proxy server can be provided
 - based on headless chrome and modified [`pyppeteer`](https://github.com/miyakogi/pyppeteer) library
+
 
 ## installation
 
